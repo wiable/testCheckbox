@@ -59,9 +59,6 @@ var additionalTutorials = document.getElementById("additional-tutorials");
 var additionalDownloadsPage = document.getElementById(
   "additional-downloads-page"
 );
-var additionalMultilingualism = document.getElementById(
-  "additional-multilingualism"
-);
 var noDesignSystem = document.getElementById("have-design-system-no");
 var yesDesignSystem = document.getElementById("have-design-system-yes");
 var totalAmount = document.getElementById("total-amount");
@@ -121,9 +118,6 @@ var additionalCaseStudies = document.getElementById("additional-case-studies");
 var additionalTutorials = document.getElementById("additional-tutorials");
 var additionalDownloadsPage = document.getElementById(
   "additional-downloads-page"
-);
-var additionalMultilingualism = document.getElementById(
-  "additional-multilingualism"
 );
 
 subscriptionRadio.addEventListener("click", function () {
@@ -238,10 +232,6 @@ additionalDownloadsPage.addEventListener("change", function () {
   updateTotalAmount();
 });
 
-additionalMultilingualism.addEventListener("change", function () {
-  updateTotalAmount();
-});
-
 function updateTotalAmount() {
   var amount = 0;
 
@@ -352,10 +342,6 @@ function updateTotalAmount() {
   if (additionalDownloadsPage.checked) {
     amount += 500;
   }
-
-  if (additionalMultilingualism.checked) {
-    amount += 500;
-  }
-
+  
   totalAmount.textContent = amount;
 }
